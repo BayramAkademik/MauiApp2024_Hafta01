@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="MauiAppHafta01.UserInfo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MauiAppHafta01"
+    mc:Ignorable="d"
+    Title="Kullanıcı"
+    >
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+
+
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <StackLayout Margin="20" Orientation="Vertical">
+            <ActivityIndicator Color="Red">
+                
+            </ActivityIndicator>
+            <Label Text="Adı:" />
+            <Entry Placeholder="Adı"/>
+
+            <Label Text="Soyadı:" />
+            <Entry Placeholder="Soyadı"/>
+
+            <Label Text="Telefon"/>
+            <Entry Placeholder="Telefon" Keyboard="Telephone"/>
+
+            <Label Text="Mail"/>
+            <Entry Placeholder="e-Mail" Keyboard="Email"/>
+
+            <Label Text="Doğum Tarihi:"/>
+            <DatePicker Date="01.01.2000" Format="dd.MM.yyyy"/>
+
+            <Label Text="Saat"/>
+            <TimePicker Format="HH:mm:ss"/>
+                
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <Button Style="{d:StaticResource OkButton}"/>
+                <Button Style="{d:StaticResource CancelButton}"/>
+            </HorizontalStackLayout>
+            
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
+</ContentPage>
